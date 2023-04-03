@@ -1,0 +1,41 @@
+@model enquete_asp.Models.RespostaModel;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquete.ASP</title>
+</head>
+<body>
+    <h1>Enquete.ASP!</h1>
+    <h2>Você gostaria de ser imortal?</h2>
+    <h4>Preencha todos os campos e marque sua resposta.</h4>
+    <form method="POST">
+        
+        <div>
+            <label for="txtNome">Insira seu nome: </label><br>
+            <input type="text" name="Nome" id="txtNome">
+        </div>
+        
+        <div>
+            <label for="txtEmail">Insira seu e-mail: </label><br>
+            <input type="email" name="email" id="txtEmail">
+        </div>
+
+        <div>
+            Resposta:
+            <div>
+                <input type="radio" id="rdSim" name="Sim" value="true">
+                <label for="rdSim">Sim</label>
+            </div>
+            <div>
+                <input type="radio" id="rdNao" name="Sim" value="false">
+                <label for="rdNao">Não</label>
+            </div>
+        </div>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

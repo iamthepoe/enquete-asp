@@ -12,9 +12,18 @@ public class HomeController : Controller
         return View();
     }
 
+    [HttpGet]
     public IActionResult Responder()
     {
         return View();
+    }
+
+    [HttpPost]
+
+    public IActionResult Responder(RespostaModel form)
+    {
+        Repositorio.AdicionarResposta(form);
+        return Content($"{form.Email}");
     }
 
 }
