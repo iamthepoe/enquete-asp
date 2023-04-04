@@ -15,23 +15,23 @@
     <form method="POST">
         
         <div>
-            <label for="txtNome">Insira seu nome: </label><br>
-            <input type="text" name="Nome" id="txtNome">
+            <label asp-for="Nome">Insira seu nome: </label><br>
+            <input asp-for="Nome">
         </div>
         
         <div>
-            <label for="txtEmail">Insira seu e-mail: </label><br>
-            <input type="email" name="email" id="txtEmail">
+            <label asp-for="Email">Insira seu e-mail: </label><br>
+            <input asp-for="Email">
         </div>
 
         <div>
             Resposta:
             <div>
-                <input type="radio" id="rdSim" name="Sim" value="true">
+                <input type="radio" id="rdSim" asp-for="Sim" value="true">
                 <label for="rdSim">Sim</label>
             </div>
             <div>
-                <input type="radio" id="rdNao" name="Sim" value="false">
+                <input type="radio" id="rdNao" asp-for="Sim" value="false">
                 <label for="rdNao">Não</label>
             </div>
         </div>
