@@ -23,7 +23,7 @@ public class HomeController : Controller
     public IActionResult Responder(RespostaModel form)
     {
         Repositorio.AdicionarResposta(form);
-        return Content($"{form.Email}");
+        return View("Obrigado");
     }
 
 }
