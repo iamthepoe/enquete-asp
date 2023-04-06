@@ -1,0 +1,21 @@
+@model IEnumerable<RespostaModel>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquete ASP</title>
+</head>
+<body>
+    <h1>Enquete.ASP</h1>
+    <h4>Resultados!</h4>
+    @foreach (RespostaModel r in Model)
+    {
+        <p>@(r.Nome): @(r.Sim.Value ? "Sim" : "Não")</p>
+    }
+    <p>
+        <a asp-action="Index">Voltar para página inicial</a>
+    </p>
+</body>
+</html>
