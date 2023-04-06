@@ -22,8 +22,22 @@ public class HomeController : Controller
 
     public IActionResult Responder(RespostaModel form)
     {
-        Repositorio.AdicionarResposta(form);
-        return View("Obrigado");
+        if (ModelState.IsValid)
+        {
+            Repositorio.AdicionarResposta(form);
+            return View("Obrigado");
+        }
+        else
+        {
+            return View(form);
+        }
+
+    }
+
+    [HttpGet]
+    public IActionResult Resultado()
+    {
+        return View(Repositorio.Respostas);
     }
 
 }
