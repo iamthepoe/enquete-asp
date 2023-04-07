@@ -6,24 +6,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Enquete.ASP</title>
 </head>
 <body>
-    <h1>Enquete.ASP!</h1>
-    <h2>Você gostaria de ser imortal?</h2>
-    <h4>Preencha todos os campos e marque sua resposta.</h4>
-    <form method="POST">
-        
+    <header class="header">
+        <h1 class="header-title">Enquete.ASP!</h1>
+        <div class="header-options">
+            <a class="header-options-option" asp-action="Responder">Responder</a>
+            <a class="header-options-option" asp-action="Resultado">Resultados</a>
+        </div>
+    </header>
+    <form method="POST" class="form">
+        <h2 class="form-question">Você gostaria de ser <span style="color: #e14096;">imortal?</span></h2>
         <div>
             <label asp-for="Nome">Insira seu nome: </label><br>
-            <input asp-for="Nome">
+            <input asp-for="Nome" id="inputName">
         </div>
-        
+        @Html.ValidationMessageFor(m => m.Nome)
         <div>
             <label asp-for="Email">Insira seu e-mail: </label><br>
-            <input asp-for="Email">
+            <input asp-for="Email" id="inputEmail">
         </div>
-
+        @Html.ValidationMessageFor(m => m.Email)
         <div>
             Resposta:
             <div>
@@ -35,7 +40,11 @@
                 <label for="rdNao">Não</label>
             </div>
         </div>
+        @Html.ValidationMessageFor(m => m.Sim)
         <input type="submit" value="Enviar">
     </form>
+    <script>
+    </script>
+    
 </body>
 </html>

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+
+:root{
+    --purple: #9F2B68;
+    --purple-light: #bc327c;
+    --black: #0a0a0a;
+    --black-light: #181818;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--black) ;
+}
+
+.header, .form{
+    display: flex;
+}
+
+.header{
+    width: 100vw;
+    height: 20vh;
+    background-color: var(--black-light) ;
+    color:var(--purple-light);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-options-option{
+    margin: 5px;
+    transition: 0.2s;
+}
+
+.header-options-option:hover{
+    color:#d83d90;
+    margin: 13px;
+}
+
+.form{
+    width: 100vw;
+    height: 70vh;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.form h2{
+    margin-bottom: 20px;
+}
+
+.form input{
+    border:  none;
+    background-color: rgb(65, 62, 62);
+    text-align: center;
+    color: #fff;
+}
+
+.form input[type=submit]{
+    width: 100px;
+    height: 30px;
+    margin-top: 10px;
+    transition: 0.2s;
+}
+
+.form input[type=submit]:hover {
+    cursor: pointer;
+    background-color: #c53582;
+}
+
+.field-validation-error{
+    color:rgb(247, 40, 40);
+    font-size: 0.8rem;
+}
